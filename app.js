@@ -11,6 +11,9 @@ app.use((req, res, next) => {
   next();
 });
 
+// Service Routes
+app.use("/v1", require("./services/routes"));
+
 const PORT = process.env.PORT || 8080;
 
 app.listen(
